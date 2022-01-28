@@ -6,8 +6,7 @@ const mongoose = require("mongoose")
 const morgan = require("morgan")
 const cors = require("cors")
 
-
-/////////////////////////
+////////////////////////////////////
 // DATABASE CONNECTION
 /////////////////////////
 mongoose.connect(DATABASE_URL, {
