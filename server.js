@@ -1,5 +1,5 @@
 require("dotenv").config()
-const { PORT = 3000, DATABASE_URL } = process.env
+const { PORT = 3000, MONGODB_URL } = process.env
 const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
@@ -9,7 +9,7 @@ const cors = require("cors")
 ////////////////////////////////////
 // DATABASE CONNECTION
 /////////////////////////
-mongoose.connect(DATABASE_URL, {
+mongoose.connect(MONGODB_URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
 })
