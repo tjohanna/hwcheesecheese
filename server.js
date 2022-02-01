@@ -67,7 +67,8 @@ app.post("/cheese", async (req, res) => {
 // UPDATE
 app.put("/cheese/:id", async (req, res) => {
     try{
-        res.json(await Cheese.findByIdAndUpdate(req.params.id, req.body, {new: true}))
+        res.json(
+            await Cheese.findByIdAndUpdate(req.params.id, req.body, {new: true}))
     } catch (error) {
         res.status(400).json(error)
     }
